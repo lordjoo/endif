@@ -8,7 +8,7 @@ Here's some important information you should Know .
 - MDB as the Frontend framwork 
 - PHP for the backend 
 - MySQL fro the Database 
-Each of us must Know the HTML, CSS good in order to pass the final test, While me and Ali are working on the backend we can invite you to a group meet to see and learn from what we are doing 
+Each of us must Know the HTML, CSS good in order to pass the final test.
 
 ## Steps of making the project 
 - first you all must have a good understanding of HTML< CSS Then we will use something called **mdb design block** to make it easily for us to build the interface for our project 
