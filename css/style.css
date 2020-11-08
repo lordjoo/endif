@@ -1,0 +1,48 @@
+*{
+    font-family: 'Tajawal', sans-serif;
+}
+
+html,
+body,
+header 
+.view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header 
+  .view {
+      height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background: #2196f3 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+ .navbar:not(.top-nav-collapse) {
+  background: #2196f3 !important;
+ }
+}
+  
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 160px;
+}
+
+.news-tile .card-title {
+  position: absolute;
+  bottom: 15px;
+  left: 40px;
+}
+
+.rgba-stylish-strong {
+  background-color: rgba(62, 69, 81, .5);
+}
