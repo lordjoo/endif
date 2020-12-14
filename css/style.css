@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Teko&display=swap');
-body{
+body,html{
   overflow-x: hidden;
 }
 .tajwal {
@@ -14,37 +14,8 @@ body{
 }
 .navbar a {
   direction: rtl;
-
-}
-html,
-body,
-header 
-.view {
-  height: 100%;
 }
 
-@media (max-width: 740px) {
-  html,
-  body,
-  header 
-  .view {
-      height: 100vh;
-  }
-}
-
-.top-nav-collapse {
-  background: #2196f3 !important;
-}
-
-.navbar:not(.top-nav-collapse) {
-  background: transparent !important;
-}
-
-@media (max-width: 991px) {
- .navbar:not(.top-nav-collapse) {
-  background: #2196f3 !important;
- }
-}
   
 .hr-light {
   border-top: 3px solid #fff;
