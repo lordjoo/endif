@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>EndIf | Page Title</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="/css/all.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="/css/mdb-pro.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="/css/signin.css" rel="stylesheet" />
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+  <script src="/logic/fb_init.js"></script>
+</head>
+<body class="text-center">
+    <form id="login-form" class="form-signin">
+      <h2 class="my-4"><span class="text-primary">E</span>nd<span class="text-primary">I</span>f</h2>
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <div class="alerts"></div>
+      <div class="md-form  ">
+        <label for="inputEmail">Email address</label>
+        <input
+          type="email"
+          id="inputEmail"
+          class="form-control"
+          required
+          autofocus
+        />
+      </div>
+      <div class="md-form  ">
+        <label for="inputPassword">Password</label>
+        <input
+          type="password"
+          id="inputPassword"
+          class="form-control"
+          required
+        />
+      </div>
+      <button id="login-btn" class="btn btn-lg btn-primary btn-block" type="submit">
+        Sign in
+      </button>
+      <p class="mt-5 mb-3 text-muted">Powered By <a target="_blank" href="https://uni-devs.tech"><img src="https://uni-devs.tech/img/logo2.png" height="25" alt=""> UniDevs</a> &copy; 2020</p>
+    </form>
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/js/mdb.min.js"></script>
+    <script src="/logic/auth.js"></script>
+    <script>
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                window.location.assign('/admin/index.html')
+            }
+        })
+    </script>
+  </body>
+</html>

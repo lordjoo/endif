@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Teko&display=swap');
+body{
+  overflow-x: hidden;
+}
+.tajwal {
+  font-family: "Tajawal";
+}
+
+.logo{
+  font-family: 'Permanent Marker', sans-serif;
+}
+*{
+    font-family: 'Cairo', sans-serif;
+}
+.navbar a {
+  direction: rtl;
+
+}
+html,
+body,
+header 
+.view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header 
+  .view {
+      height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background: #2196f3 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+ .navbar:not(.top-nav-collapse) {
+  background: #2196f3 !important;
+ }
+}
+  
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 160px;
+}
+
+.news-tile .card-title {
+  position: absolute;
+  bottom: 15px;
+  left: 40px;
+}
+
+.rgba-stylish-strong {
+  background-color: rgba(62, 69, 81, .5);
+}
+.page-header {
+  background-size: cover;
+}
+
+code , pre {
+  text-align: left;
+  direction: ltr;
+}
