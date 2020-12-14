@@ -68,3 +68,8 @@ code , pre {
   text-align: left;
   direction: ltr;
 }
+@media (max-width: 991px) {
+.navbar:not(.top-nav-collapse) {
+    background: #ffffff !important;
+}
+}
