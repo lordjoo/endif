@@ -17,7 +17,11 @@
     <link href="/css/mdb-pro.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="/css/style.css" rel="stylesheet">
-</head>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <script src="/logic/fb_init.js"></script>
+  </head>
 
 <body>
 
@@ -85,146 +89,21 @@
                 </div>
             </div>
         </div>
-
+      
         <div class="page-body pt-4 pb-3">
             <div class="container">
-                <div class="row mb-4">
+                <div class="row flex-row-reverse mb-4">
                     <div class="col-md-12">
                         <h3>تصفح المسارات</h3>
                     </div>
                 </div>
-                <div class="row flex-row-reverse">
-                    <!-- Grid column -->
-                    <div class="col-lg-4 col-md-12 mb-md-3 mb-4">
-                        <!-- Card -->
-                        <div class="card hoverable">
-
-                            <!-- Card image -->
-                            <img class="card-img-top"
-                                src="https://res.cloudinary.com/practicaldev/image/fetch/s--NTHijCfd--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://miro.medium.com/max/890/1%2ASxQ9mqNjVUop7OpNyoUStg.png"
-                                alt="Card image cap">
-
-                            <!-- Card content -->
-                            <div class="card-body">
-
-                                <!-- Title -->
-                                <a href="#!" class="black-text">
-                                    C++
-                                </a>
-
-                            </div>
-
-                        </div>
-                        <!-- Card -->
-
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-lg-4 col-md-12 mb-md-3 mb-4">
-                        <!-- Card -->
-                        <div class="card hoverable">
-
-                            <!-- Card image -->
-                            <img class="card-img-top"
-                                src="https://res.cloudinary.com/practicaldev/image/fetch/s--NTHijCfd--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://miro.medium.com/max/890/1%2ASxQ9mqNjVUop7OpNyoUStg.png"
-                                alt="Card image cap">
-
-                            <!-- Card content -->
-                            <div class="card-body">
-
-                                <!-- Title -->
-                                <a href="#!" class="black-text">
-                                    C++
-                                </a>
-
-                            </div>
-
-                        </div>
-                        <!-- Card -->
-
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-lg-4 col-md-12 mb-md-3 mb-4">
-                        <!-- Card -->
-                        <div class="card hoverable">
-
-                            <!-- Card image -->
-                            <img class="card-img-top"
-                                src="https://res.cloudinary.com/practicaldev/image/fetch/s--NTHijCfd--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://miro.medium.com/max/890/1%2ASxQ9mqNjVUop7OpNyoUStg.png"
-                                alt="Card image cap">
-
-                            <!-- Card content -->
-                            <div class="card-body">
-
-                                <!-- Title -->
-                                <a href="#!" class="black-text">
-                                    C++
-                                </a>
-
-                            </div>
-
-                        </div>
-                        <!-- Card -->
-
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-lg-4 col-md-12 mb-md-3 mb-4">
-                        <!-- Card -->
-                        <div class="card hoverable">
-
-                            <!-- Card image -->
-                            <img class="card-img-top"
-                                src="https://res.cloudinary.com/practicaldev/image/fetch/s--NTHijCfd--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://miro.medium.com/max/890/1%2ASxQ9mqNjVUop7OpNyoUStg.png"
-                                alt="Card image cap">
-
-                            <!-- Card content -->
-                            <div class="card-body">
-
-                                <!-- Title -->
-                                <a href="#!" class="black-text">
-                                    C++
-                                </a>
-
-                            </div>
-
-                        </div>
-                        <!-- Card -->
-
-                    </div>
-                    <!-- Grid column -->
-                    <!-- Grid column -->
-                    <div class="col-lg-4 col-md-12 mb-md-3 mb-4">
-                        <!-- Card -->
-                        <div class="card hoverable">
-
-                            <!-- Card image -->
-                            <img class="card-img-top"
-                                src="https://res.cloudinary.com/practicaldev/image/fetch/s--NTHijCfd--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://miro.medium.com/max/890/1%2ASxQ9mqNjVUop7OpNyoUStg.png"
-                                alt="Card image cap">
-
-                            <!-- Card content -->
-                            <div class="card-body">
-
-                                <!-- Title -->
-                                <a href="#!" class="black-text">
-                                    C++
-                                </a>
-
-                            </div>
-
-                        </div>
-                        <!-- Card -->
-
-                    </div>
-                    <!-- Grid column -->
-
+                <div id="courses-div" class="row flex-row-reverse mt-2">
+                  
                 </div>
             </div>
         </div>
-
-    </main>
+      
+      </main>      
     <!-- End Content -->
 
 
@@ -246,6 +125,8 @@
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="/js/mdb.min.js"></script>
+    <script src="/logic/get_from_db.js"></script>
+
 </body>
 
 </html>

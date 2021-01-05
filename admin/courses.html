@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>EndIf | Page Title</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="/css/all.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="/css/mdb-pro.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="/css/style.css" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+  <script src="/logic/fb_init.js"></script>
+</head>
+<body>
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light white">
+
+  <div class="container flex-row-reverse">
+
+    <a class="navbar-brand logo" href="#">
+      EndIF
+    </a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto flex-row-reverse">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span class="fas fa-home"></span>
+            الرئيسية
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/admin/courses">
+            <span class="fas fa-scalpel-path"></span>
+            الكورسات
+          </a>
+        </li>
+        <li class="nav-item">
+          <a id="signOut-btn" class="nav-link" href="#">
+            <span class="fas fa-sign-out"></span>
+            تسجيل الخروج
+          </a>
+        </li>
+      </ul>
+      <!-- Links -->
+
+    </div>
+    <!-- Collapsible content -->
+
+  </div>
+
+</nav>
+<!--/.Navbar-->
+
+<main class="page mb-4">
+  <div style="background-image: url('https://res.cloudinary.com/practicaldev/image/fetch/s--rPvSn38T--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/h2917prj7ldo0ow5x5ih.png');"
+      class="page-header">
+      <div class="rgba-stylish-strong white-text py-2">
+          <div class="container py-3">
+              <div class="row flex-row-reverse">
+                  <div class="col-md-10 col-12">
+                      <h1>مسارات التعلم</h1>
+                      <p>ستجد العديد من المسارات في مجالات مختلفة في البرمجه </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="page-body pt-4 pb-3">
+      <div class="container">
+          <div class="row flex-row-reverse mb-4">
+              <div class="col-md-10">
+                  <h3>تصفح المسارات</h3>
+              </div>
+              <div class="col-md-2">
+                <button data-toggle="modal" data-target="#addCourse" class="btn btn-primary btn-sm">
+                  اضف كروس
+                </button>
+              </div>
+          </div>
+          <div id="courses-div" class="row flex-row-reverse mt-2">
+            
+          </div>
+      </div>
+  </div>
+
+</main>
+
+<!-- Content -->
+
+<!-- footer -->
+<footer class="footer grey darken-3">
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 py-2 text-center white-text elegant-color z-depth-1 rounded">
+      <h6 class="py-2">Made with <i class="fas fa-heart red-text mx-1"></i> by ...</h3>
+    </section>
+</footer>
+<!-- end footer -->
+
+<div class="modal fade" id="addCourse" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="modal-title" id="exampleModalLongTitle">
+          اضف كورس
+        </h5>
+      </div>
+      <div class="modal-body">
+        <div style="direction: rtl;" class="md-form md-outline">
+          <input type="text" class="form-control" id="name">
+          <label class="mx-2" for="name">اسم الكورس</label>
+        </div>
+        <div class="md-form">
+          <div class="file-field">
+            <a class="btn-floating btn-primary mt-0 float-left">
+              <i class="far fa-image" aria-hidden="true"></i>
+              <input accept="image/*" id="photo" type="file">
+            </a>
+            <div class="file-path-wrapper">
+              <input readonly class="file-path validate" type="text" placeholder="Upload your file">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Close</button>
+        <button id="add_course_btn" type="button" class="btn btn-success btn-sm">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="/js/mdb.min.js"></script>
+
+<!-- DB Files -->
+<script src="/logic/db.js"></script>
+<script src="/logic/get_from_db.js"></script>
+<script src="/logic/dad-is-here.js"></script>
+
+</body>
+</html>

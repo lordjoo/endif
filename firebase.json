@@ -10,6 +10,13 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "rewrites": [ {
+      "source": "/course/*",
+      "destination": "/pages/content.html"
+    },{
+      "source": "/lesson/*",
+      "destination": "/pages/lesson.html"
+    }],
     "cleanUrls": true
   },
   "emulators": {

@@ -14,6 +14,10 @@
   <link href="/css/mdb-pro.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="/css/style.css" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+  <script src="/logic/fb_init.js"></script>
 </head>
 <body>
 
@@ -68,13 +72,12 @@
   
 <!-- Content -->
 <main class="page mb-4">
-    <div style="background-image: url('https://res.cloudinary.com/practicaldev/image/fetch/s--rPvSn38T--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/h2917prj7ldo0ow5x5ih.png');" class="page-header">
+    <div id="c_photo" style="background-image: url('');" class="page-header">
         <div class="rgba-stylish-strong white-text py-5">
            <div class="container py-3">
             <div class="row flex-row-reverse">
                 <div class="col-md-10 col-12">
-                    <h1>C++ Fundementals</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ex corrupti quae officiis earum incidunt magni, consequatur deleniti voluptates perspiciatis.</p>
+                    <h1 id="c_name"></h1>
                 </div>
             </div>
            </div>
@@ -83,9 +86,14 @@
 
     <div class="page-body pt-4 pb-3">
         <div class="container">
-            <div class="row mb-4">
-                <div class="col-md-12">
+            <div class="row mb-4 flex-row-reverse">
+                <div class="col-md-10">
                     <h3>محتوى الدورة</h3>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary btn-sm mama-is-here">
+                        اضف درس
+                    </button>
                 </div>
             </div>
             <div class="row flex-row-reverse">
@@ -141,6 +149,7 @@
 
 </main>
 <!-- End Content -->
+<div id="summernote">Hello Summernote</div>
 
 
 <!-- footer -->
@@ -152,6 +161,8 @@
 </footer>
 <!-- end footer -->
 
+
+
 <!-- SCRIPTS -->
 <!-- JQuery -->
 <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
@@ -161,5 +172,16 @@
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="/js/mdb.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+<script src="/logic/content.js"></script>
+<script src="/logic/dad-is-here.js"></script>
+<script>
+$(document).ready(function() {
+    $('#summernote').summernote();
+  });
+</script>
+
 </body>
 </html>
