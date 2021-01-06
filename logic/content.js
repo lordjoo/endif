@@ -8,8 +8,9 @@ var db = firebase.firestore();
     let c = course.docs[0].data();
     $("#c_name").text(c.name)
     $("#c_photo").css("background-image",`url('${c.photo}')`);
-    $("#c_add_lesson").attr("href","/admin/addLesson/"+course.docs[0].id).removeClass("disabled");
-    db.collection("lessons").where("course_id","==",course.docs[0].id)
+    $("#c_add_lesson").attr("href","/admin/addLesson/"+c.id)
+    $("#c_add_lesson").removeClass("disabled");
+    db.collection("lessons").where("course_id","==",c.id)
         .onSnapshot(function (snap) {
             
         });
