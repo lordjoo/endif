@@ -13,10 +13,16 @@
     "rewrites": [ {
       "source": "/course/*",
       "destination": "/pages/content.html"
-    },{
+    },
+    {
+      "source": "/admin/addLesson/*",
+      "destination": "/admin/addLesson.html"
+    },
+    {
       "source": "/lesson/*",
       "destination": "/pages/lesson.html"
-    }],
+    }
+  ],
     "cleanUrls": true
   },
   "emulators": {
