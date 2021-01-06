@@ -1,3 +1,6 @@
+//adding courses
+
+
 var db = firebase.firestore();
 const course = db.collection("courses")
 // Get Courses

@@ -18,6 +18,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/styles/atom-one-dark.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
 
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+  <script src="/logic/fb_init.js"></script>
 </head>
 <body class="grey lighten-4">
 <!--Navbar-->
@@ -72,54 +77,17 @@
 <!-- Content -->
 
 <main class="page">
-  <div class="container py-4 white">
+  <div class="container pt-4 white">
     <div class="row mb-3">
       <div class="col-md-12">
-        <h2>المتغيرات</h2>
+        <h2 id="lesson-name"></h2>
+
+
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-          <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, fuga nesciunt quis nemo sunt aperiam molestias illum veniam esse odio.
-        <br>
-        <b class="font-weight-bold">Lorem, ipsum dolor.</b>
-        <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque odit nihil veritatis qui earum in molestias culpa ad, dolore aspernatur eveniet exercitationem amet possimus esse saepe nam quibusdam nulla commodi fugit quis nobis officiis at eaque! Cum vel error, sint, illo necessitatibus suscipit doloribus quos et officiis maiores ducimus saepe?</p>
-      </div>
-    </div>
-    <div class="row flex-row-reverse">
-      <div class="col-md-4">
-        <img src="https://via.placeholder.com/300/50" style="width: 100%;height: 300px;" alt="">
-      </div>
-      <div class="col-md-8">
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet porro, fugit omnis fugiat doloremque quaerat itaque quia sed aliquid laborum nesciunt a repellendus tenetur repellat magni? Atque facilis ullam quia aspernatur dicta, rerum odit a possimus voluptate iusto non veritatis harum libero, aut, esse vitae. Iusto, voluptatibus aperiam? Nobis eum laborum accusantium culpa quia quidem saepe nesciunt, non dolore voluptates perspiciatis reiciendis fugit provident reprehenderit quasi sequi. Nam, aliquid nesciunt voluptate qui consequuntur quas autem velit quae magnam dicta neque vero illum eius ea repudiandae dolores sapiente totam dolor quis, odio eum possimus et cumque ad. Eum, voluptas repellat. Odio, at eaque sed voluptatem nemo amet? Earum at quisquam ducimus quidem vitae doloribus quos ipsam beatae veritatis vel! Necessitatibus, laudantium!
-        </p>
-      </div>
-    </div>
-    <div class="row mt-4 flex-row-reverse">
-      <div class="col-md-12">
-        <pre style="width: 30em;" class="mr-auto">
-          <code class="hljs cpp">
-    #include &ltiostream>
-          int main(int argc, char *argv[]) {
-          
-            /* An annoying "Hello World" example */
-            for (auto i = 0; i < 0xFFFF; i++)
-              cout << "Hello, World!" << endl;
-          
-            char c = '\n';
-            unordered_map <string, vector<string> > m;
-            m["key"] = "\\\\"; // this is an error
-          
-            return -2e3 + 12l;
-          }
-          
-          </code>
-        </pre>
-      </div>
-    </div>
+  </div>
+  <div class="container pb-4" id ="lesson-content">
+
   </div>
 </main>
 
@@ -141,6 +109,8 @@
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="/js/mdb.min.js"></script>
+
+<script type="text/javascript" src="/logic/get_lesson_from_db.js"></script>
 <script>
   let snippet = document.querySelector('code');
   hljs.highlightBlock(snippet);

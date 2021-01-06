@@ -12,7 +12,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 if (location.hostname === "localhost") {
-    firebase.firestore().useEmulator("localhost", 8080);
-    console.log("Running Firebase Firestore Emulator");
+    //firebase.firestore().useEmulator("localhost", 8080);
+    //console.log("Running Firebase Firestore Emulator");
 }
   

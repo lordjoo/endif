@@ -1,3 +1,5 @@
+// to fix the trash-can for the admin and non-admins
+
 firebase.auth().onAuthStateChanged(function (user) {
     let interval;
     if (user)    {
