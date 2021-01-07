@@ -15,4 +15,15 @@ if (location.hostname === "localhost") {
     //firebase.firestore().useEmulator("localhost", 8080);
     //console.log("Running Firebase Firestore Emulator");
 }
-  
+
+firebase.auth().onAuthStateChanged(function(user) {
+    let interval;
+    if (user)    {
+        interval = setInterval(()=>{
+            $("body").find(".mama-is-here").css("display","block")
+        },100);
+    } else {
+        clearInterval(interval);
+    }
+    
+});

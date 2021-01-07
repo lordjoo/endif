@@ -61,6 +61,12 @@
             عنا
           </a>
         </li>
+        <li class="nav-item">
+          <a id="signOut-btn" class="nav-link" href="#">
+            <span class="fas fa-sign-out"></span>
+            تسجيل الخروج
+          </a>
+        </li>
       </ul>
       <!-- Links -->
 
@@ -138,6 +144,13 @@
     });
 
   })();
+</script>
+<script>
+  firebase.auth().onAuthStateChanged(function (user) {
+      if (!user) {
+          window.location.assign('/admin/login')
+      }
+  })
 </script>
 </body>
 </html>
