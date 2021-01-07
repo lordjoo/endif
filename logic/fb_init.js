@@ -24,6 +24,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         },100);
     } else {
         clearInterval(interval);
+        $("body").find(".mama-is-here").css("display","block")
+
     }
     
 });
